@@ -3,6 +3,6 @@ const outputName = document.querySelector('#name-output');
 
 inputName.addEventListener('input', onKeyboardEvent);
 
-function onKeyboardEvent() {
-    outputName.textContent = inputName.value;
+function onKeyboardEvent(event) {
+    outputName.textContent = event.currentTarget.value;
 }
