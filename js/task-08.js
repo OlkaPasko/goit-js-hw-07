@@ -30,10 +30,14 @@ function createBoxes(amount) {
     refs.boxes.append(...childBoxes);
 }
 
+function destroyBoxes() {
+    refs.boxes.innerHTML = '';
+}
+
 function onBtnRenderClick() {
     createBoxes(refs.input.value);
 }
 
 function onBtnDestroyClick() {
-    refs.boxes.innerHTML = '';
+    destroyBoxes();
 }
