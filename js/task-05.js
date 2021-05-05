@@ -4,5 +4,7 @@ const outputName = document.querySelector('#name-output');
 inputName.addEventListener('input', onKeyboardEvent);
 
 function onKeyboardEvent(event) {
-    outputName.textContent = event.currentTarget.value;
+    const val = event.currentTarget.value;
+
+    outputName.textContent = val ? val : 'незнакомец';
 }
