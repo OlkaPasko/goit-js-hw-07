@@ -7,10 +7,13 @@ function onInputBlur(event) {
     const valCurrent = event.currentTarget.value.length;
 
     if (valTarget === valCurrent) {
-        inputField.classList.remove('invalid');
-        inputField.classList.add('valid');
+        removeAddCl('invalid', 'valid');
     } else {
-        inputField.classList.remove('valid');
-        inputField.classList.add('invalid');
+        removeAddCl('valid', 'invalid');
     }
+}
+
+function removeAddCl (rmv, add) {
+    inputField.classList.remove(rmv);
+    inputField.classList.add(add);
 }
